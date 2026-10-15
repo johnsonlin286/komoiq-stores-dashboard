@@ -1,0 +1,142 @@
+{
+  "storeName": "Ranch Market Pondok Indah",
+  "wasteThisMonth": {
+    "value": "5,4%",
+    "detail": "dari penjualan bulan ini"
+  },
+  "tasks": [
+    {
+      "id": "tsk_01",
+      "productName": "Selada romaine",
+      "sku": "SG-SEL-012",
+      "levelId": "fresh-1",
+      "detail": "Tidak terjual 1 hari, sisa 12",
+      "actionLabel": "Pindah ke rak murah",
+      "quantityLabel": "12 ikat",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": "Rak Masak Hari Ini"
+    },
+    {
+      "id": "tsk_02",
+      "productName": "Greek yogurt 500g",
+      "sku": "SG-YOG-500",
+      "levelId": "fresh-3",
+      "detail": "Tidak terjual 3 hari, sisa 38",
+      "actionLabel": "Pindah ke PIK",
+      "quantityLabel": "38 pack",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": "Ranch Market PIK"
+    },
+    {
+      "id": "tsk_03",
+      "productName": "Pet food 2 kg",
+      "sku": "NF-PET-2000",
+      "levelId": "other-2w",
+      "detail": "Tidak terjual 14 hari",
+      "actionLabel": "Cek di rak",
+      "quantityLabel": "26 kantong",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": null
+    },
+    {
+      "id": "tsk_04",
+      "productName": "Minyak zaitun 1 L",
+      "sku": "NF-OIL-1000",
+      "levelId": "other-3m",
+      "detail": "Stok untuk 4 bulan",
+      "actionLabel": "Retur ke pemasok",
+      "quantityLabel": "18 botol",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": "Pemasok"
+    },
+    {
+      "id": "tsk_05",
+      "productName": "Truffle crackers",
+      "sku": "NF-CRK-TRF",
+      "levelId": "other-6m",
+      "detail": "Tidak laku sejak April",
+      "actionLabel": "Hapus dan ganti",
+      "quantityLabel": "24 kotak",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": null
+    },
+    {
+      "id": "tsk_06",
+      "productName": "Kombucha 6-pack",
+      "sku": "NF-KOM-006",
+      "levelId": "other-1m",
+      "detail": "Masih ada stok untuk 6 minggu",
+      "actionLabel": "Stop pesan ulang",
+      "quantityLabel": "15 pack",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": null
+    },
+    {
+      "id": "tsk_07",
+      "productName": "Roti sourdough",
+      "sku": "SG-RTI-SRD",
+      "levelId": "fresh-2",
+      "detail": "Tidak terjual 2 hari, sisa 8",
+      "actionLabel": "Pindah ke rak murah",
+      "quantityLabel": "8 loaf",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": "Rak Masak Hari Ini"
+    },
+    {
+      "id": "tsk_08",
+      "productName": "Susu oat 1 L",
+      "sku": "SG-SUS-OAT",
+      "levelId": "fresh-1",
+      "detail": "Tidak terjual 1 hari, sisa 20",
+      "actionLabel": "Cek di rak",
+      "quantityLabel": "20 karton",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": null
+    },
+    {
+      "id": "tsk_09",
+      "productName": "Berries mix 250g",
+      "sku": "SG-BRY-250",
+      "levelId": "fresh-2",
+      "detail": "Tidak terjual 2 hari, sisa 11",
+      "actionLabel": "Pindah ke rak murah",
+      "quantityLabel": "11 mangkuk",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": "Rak Masak Hari Ini"
+    },
+    {
+      "id": "tsk_10",
+      "productName": "Saus truffle 200ml",
+      "sku": "NF-SAU-200",
+      "levelId": "other-3m",
+      "detail": "Stok untuk 5 bulan",
+      "actionLabel": "Retur ke pemasok",
+      "quantityLabel": "16 botol",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": "Pemasok"
+    },
+    {
+      "id": "tsk_11",
+      "productName": "Keju manchego 150g",
+      "sku": "SG-KEJ-150",
+      "levelId": "fresh-3",
+      "detail": "Tidak terjual 3 hari, sisa 7",
+      "actionLabel": "Pindah ke rak murah",
+      "quantityLabel": "7 bungkus",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": "Rak Masak Hari Ini"
+    },
+    {
+      "id": "tsk_12",
+      "productName": "Jus jeruk 1 L",
+      "sku": "SG-JUS-1000",
+      "levelId": "other-2w",
+      "detail": "Tidak terjual 14 hari",
+      "actionLabel": "Stop pesan ulang",
+      "quantityLabel": "22 botol",
+      "fromLabel": "Ranch Market Pondok Indah",
+      "toLabel": null
+    }
+  ],
+  "confirmations": []
+}
