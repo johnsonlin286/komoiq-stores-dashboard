@@ -4,6 +4,7 @@ import {
   homeForRole,
   storeAdminRole,
   storeManagementRole,
+  superAdminRole,
 } from "@/types/dashboard";
 
 export async function proxy(request: NextRequest) {
@@ -19,9 +20,14 @@ export async function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const blockedAdmin = pathname.startsWith("/store-admin") && session?.role !== storeAdminRole;
+  const blockedAdmin =
+    pathname.startsWith("/store-admin") &&
+    session?.role !== storeAdminRole &&
+    session?.role !== superAdminRole;
   const blockedManagement =
-    pathname.startsWith("/store-managment") && session?.role !== storeManagementRole;
+    pathname.startsWith("/store-managment") &&
+    session?.role !== storeManagementRole &&
+    session?.role !== superAdminRole;
 
   if (blockedAdmin || blockedManagement) {
     if (!isRead) {

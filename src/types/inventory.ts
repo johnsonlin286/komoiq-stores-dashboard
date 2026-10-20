@@ -46,6 +46,7 @@ export type LevelDefinition = {
   kind: "fresh" | "other";
   days: number;
   label: string;
+  shortLabel: string;
   tone: LevelTone;
 };
 

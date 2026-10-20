@@ -1,0 +1,7 @@
+[
+  { "id": "grand-indonesia", "code": "GI", "name": "Ranch Market Grand Indonesia", "size": "besar", "wastePercent": 3.9, "shelfAvailability": 97 },
+  { "id": "pik", "code": "PIK", "name": "Ranch Market PIK", "size": "besar", "wastePercent": 4.8, "shelfAvailability": 96 },
+  { "id": "menteng", "code": "MTG", "name": "Ranch Market Menteng", "size": "sedang", "wastePercent": 5.5, "shelfAvailability": 95 },
+  { "id": "pondok-indah", "code": "PI", "name": "Ranch Market Pondok Indah", "size": "sedang", "wastePercent": 6.1, "shelfAvailability": 94 },
+  { "id": "fatmawati", "code": "FTM", "name": "Ranch Market Fatmawati", "size": "kecil", "wastePercent": 6.4, "shelfAvailability": 93 }
+]

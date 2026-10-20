@@ -1,0 +1,61 @@
+[
+  { "sku": "SG-SAY-001", "name": "Selada romaine", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 5, "unit": "ikat" },
+  { "sku": "SG-SAY-002", "name": "Bayam organik", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 4, "unit": "ikat" },
+  { "sku": "SG-SAY-003", "name": "Tomat ceri", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 7, "unit": "pack" },
+  { "sku": "SG-SAY-004", "name": "Wortel baby", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 10, "unit": "pack" },
+  { "sku": "SG-SAY-005", "name": "Brokoli", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 6, "unit": "buah" },
+  { "sku": "SG-SAY-006", "name": "Paprika merah", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 8, "unit": "kg" },
+  { "sku": "SG-SAY-007", "name": "Jeruk sunkist", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 14, "unit": "kg" },
+  { "sku": "SG-SAY-008", "name": "Apel fuji", "category": "Sayur & buah segar", "fresh": true, "shelfLifeDays": 18, "unit": "kg" },
+
+  { "sku": "SG-DAI-001", "name": "Greek yogurt 500g", "category": "Dairy & chilled", "fresh": true, "shelfLifeDays": 12, "unit": "pack" },
+  { "sku": "SG-DAI-002", "name": "Susu oat 1 L", "category": "Dairy & chilled", "fresh": true, "shelfLifeDays": 10, "unit": "karton" },
+  { "sku": "SG-DAI-003", "name": "Keju manchego 150g", "category": "Dairy & chilled", "fresh": true, "shelfLifeDays": 30, "unit": "pack" },
+  { "sku": "SG-DAI-004", "name": "Mentega Eropa 200g", "category": "Dairy & chilled", "fresh": true, "shelfLifeDays": 45, "unit": "pack" },
+  { "sku": "SG-DAI-005", "name": "Susu UHT full cream 1 L", "category": "Dairy & chilled", "fresh": true, "shelfLifeDays": 60, "unit": "karton" },
+
+  { "sku": "SG-RTI-001", "name": "Roti sourdough", "category": "Roti & bakery", "fresh": true, "shelfLifeDays": 4, "unit": "loaf" },
+  { "sku": "SG-RTI-002", "name": "Croissant almond", "category": "Roti & bakery", "fresh": true, "shelfLifeDays": 3, "unit": "pack" },
+  { "sku": "SG-RTI-003", "name": "Bagel gandum", "category": "Roti & bakery", "fresh": true, "shelfLifeDays": 5, "unit": "pack" },
+  { "sku": "SG-RTI-004", "name": "Muffin blueberry", "category": "Roti & bakery", "fresh": true, "shelfLifeDays": 4, "unit": "pack" },
+
+  { "sku": "SG-DAG-001", "name": "Salmon fillet", "category": "Daging & seafood", "fresh": true, "shelfLifeDays": 3, "unit": "kg" },
+  { "sku": "SG-DAG-002", "name": "Udang vaname", "category": "Daging & seafood", "fresh": true, "shelfLifeDays": 3, "unit": "kg" },
+  { "sku": "SG-DAG-003", "name": "Dada ayam fillet", "category": "Daging & seafood", "fresh": true, "shelfLifeDays": 4, "unit": "kg" },
+  { "sku": "SG-DAG-004", "name": "Daging sapi has dalam", "category": "Daging & seafood", "fresh": true, "shelfLifeDays": 5, "unit": "kg" },
+
+  { "sku": "NF-GRO-001", "name": "Minyak zaitun 1 L", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 540, "unit": "botol" },
+  { "sku": "NF-GRO-002", "name": "Pasta spaghetti 500g", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 720, "unit": "pack" },
+  { "sku": "NF-GRO-003", "name": "Beras basmati 5kg", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 365, "unit": "karung" },
+  { "sku": "NF-GRO-004", "name": "Tepung terigu 1kg", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 300, "unit": "pack" },
+  { "sku": "NF-GRO-005", "name": "Gula pasir 1kg", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 540, "unit": "pack" },
+  { "sku": "NF-GRO-006", "name": "Kopi arabika 250g", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 365, "unit": "pack" },
+  { "sku": "NF-GRO-007", "name": "Sereal granola 400g", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 270, "unit": "kotak" },
+  { "sku": "NF-GRO-008", "name": "Madu murni 350ml", "category": "Grocery kering", "fresh": false, "shelfLifeDays": 720, "unit": "botol" },
+
+  { "sku": "NF-MIN-001", "name": "Jus jeruk 1 L", "category": "Minuman", "fresh": false, "shelfLifeDays": 60, "unit": "botol" },
+  { "sku": "NF-MIN-002", "name": "Kombucha 6-pack", "category": "Minuman", "fresh": false, "shelfLifeDays": 90, "unit": "pack" },
+  { "sku": "NF-MIN-003", "name": "Teh hijau impor 50s", "category": "Minuman", "fresh": false, "shelfLifeDays": 540, "unit": "kotak" },
+  { "sku": "NF-MIN-004", "name": "Air mineral 1,5L (24-pack)", "category": "Minuman", "fresh": false, "shelfLifeDays": 365, "unit": "karton" },
+  { "sku": "NF-MIN-005", "name": "Soda water 6-pack", "category": "Minuman", "fresh": false, "shelfLifeDays": 270, "unit": "pack" },
+
+  { "sku": "NF-BUM-001", "name": "Saus truffle 200ml", "category": "Bumbu & saus", "fresh": false, "shelfLifeDays": 365, "unit": "botol" },
+  { "sku": "NF-BUM-002", "name": "Saus tomat 340g", "category": "Bumbu & saus", "fresh": false, "shelfLifeDays": 365, "unit": "botol" },
+  { "sku": "NF-BUM-003", "name": "Kecap manis 600ml", "category": "Bumbu & saus", "fresh": false, "shelfLifeDays": 540, "unit": "botol" },
+  { "sku": "NF-BUM-004", "name": "Saus sambal 340ml", "category": "Bumbu & saus", "fresh": false, "shelfLifeDays": 365, "unit": "botol" },
+  { "sku": "NF-BUM-005", "name": "Bumbu rendang instan", "category": "Bumbu & saus", "fresh": false, "shelfLifeDays": 270, "unit": "pack" },
+
+  { "sku": "NF-PRC-001", "name": "Sabun mandi cair 500ml", "category": "Personal care", "fresh": false, "shelfLifeDays": 720, "unit": "botol" },
+  { "sku": "NF-PRC-002", "name": "Shampo keratin 350ml", "category": "Personal care", "fresh": false, "shelfLifeDays": 720, "unit": "botol" },
+  { "sku": "NF-PRC-003", "name": "Pasta gigi whitening", "category": "Personal care", "fresh": false, "shelfLifeDays": 540, "unit": "kotak" },
+  { "sku": "NF-PRC-004", "name": "Hand sanitizer 100ml", "category": "Personal care", "fresh": false, "shelfLifeDays": 540, "unit": "botol" },
+
+  { "sku": "NF-RTG-001", "name": "Tisu dapur 6-roll", "category": "Rumah tangga", "fresh": false, "shelfLifeDays": 720, "unit": "pack" },
+  { "sku": "NF-RTG-002", "name": "Deterjen cair 1 L", "category": "Rumah tangga", "fresh": false, "shelfLifeDays": 720, "unit": "botol" },
+  { "sku": "NF-RTG-003", "name": "Pembersih lantai 800ml", "category": "Rumah tangga", "fresh": false, "shelfLifeDays": 720, "unit": "botol" },
+
+  { "sku": "NF-PET-001", "name": "Pet food 2kg", "category": "Pet care", "fresh": false, "shelfLifeDays": 365, "unit": "kantong" },
+  { "sku": "NF-PET-002", "name": "Pet food 1kg", "category": "Pet care", "fresh": false, "shelfLifeDays": 365, "unit": "kantong" },
+  { "sku": "NF-PET-003", "name": "Pasir kucing 5L", "category": "Pet care", "fresh": false, "shelfLifeDays": 540, "unit": "kantong" },
+  { "sku": "NF-PET-004", "name": "Snack anjing 200g", "category": "Pet care", "fresh": false, "shelfLifeDays": 270, "unit": "pack" }
+]

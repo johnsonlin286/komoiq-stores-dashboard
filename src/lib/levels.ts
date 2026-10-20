@@ -44,7 +44,8 @@ function defineLevel(
     kind,
     days,
     label: levelLabel(kind, days),
-    tone: levelTone(kind, index, length),
+    shortLabel: daySpan(days),
+    tone: levelTone(index, length),
   };
 }
 
@@ -62,12 +63,8 @@ function daySpan(days: number) {
   return `${days} hari`;
 }
 
-function levelTone(
-  kind: "fresh" | "other",
-  index: number,
-  length: number,
-): LevelTone {
+function levelTone(index: number, length: number): LevelTone {
   if (index === length - 1) return "urgent";
-  if (kind === "other" && index === 0) return "neutral";
+  if (index === 0) return "neutral";
   return "attention";
 }

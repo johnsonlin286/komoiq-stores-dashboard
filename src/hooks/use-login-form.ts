@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { isRedirectError } from "next/dist/client/components/redirect-error";
-import { establishSession } from "@/app/actions/auth";
+import { establishDemoSession, establishSession } from "@/app/actions/auth";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { missingFirebaseEnv } from "@/lib/firebase-config";
 import { loginSchema, type LoginState } from "@/server/validation";
@@ -23,6 +23,25 @@ export function useLoginForm() {
     if (!parsed.success) {
       setState({ fieldErrors: z.flattenError(parsed.error).fieldErrors });
       return;
+    }
+
+    setPending(true);
+
+    try {
+      // Demo-only path (see establishDemoSession): matches AUTH_EMAIL /
+      // AUTH_PASSWORD in .env.local, no Firebase involved. Falls through to
+      // the normal Firebase flow below when the email isn't that account.
+      const demo = await establishDemoSession(parsed.data.email, parsed.data.password);
+      if (demo.matched) {
+        if (demo.message) setState({ message: demo.message });
+        return;
+      }
+    } catch (error) {
+      if (isRedirectError(error)) throw error;
+      setState({ message: "Tidak dapat masuk saat ini." });
+      return;
+    } finally {
+      setPending(false);
     }
 
     if (missingFirebaseEnv().length > 0) {

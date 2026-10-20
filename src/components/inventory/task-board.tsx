@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DashboardSwitchLink } from "@/components/auth/dashboard-switch-link";
 import { LogoutButton } from "@/components/auth/logout-button";
 import { CompletedList } from "@/components/inventory/completed-list";
 import { ConfirmDialog } from "@/components/inventory/confirm-dialog";
@@ -51,6 +52,7 @@ export function TaskBoard({
             <p className="text-sm font-medium">Inventory Optimizer</p>
           </div>
           <div className="flex items-center gap-3">
+            <DashboardSwitchLink user={user} href="/store-managment" label="Lihat sebagai manajemen" />
             <p className="hidden text-right sm:block">
               <span className="block text-sm font-medium">{user.name}</span>
               <span className="text-xs text-sidebar-muted">Manajer toko</span>

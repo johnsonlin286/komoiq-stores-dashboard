@@ -2,7 +2,7 @@ import "server-only";
 
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
-import { isAppRole, type CurrentUser } from "@/types/dashboard";
+import { isSessionRole, type CurrentUser } from "@/types/dashboard";
 
 const COOKIE_NAME = "session";
 const MAX_AGE_SECONDS = 60 * 60 * 8;
@@ -42,7 +42,7 @@ export async function decrypt(token: string | undefined): Promise<CurrentUser | 
       typeof payload.userId !== "string" ||
       typeof payload.email !== "string" ||
       typeof payload.name !== "string" ||
-      !isAppRole(payload.role)
+      !isSessionRole(payload.role)
     ) {
       return null;
     }

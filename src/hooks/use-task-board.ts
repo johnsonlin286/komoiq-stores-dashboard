@@ -1,41 +1,16 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { readConfirmations, subscribeConfirmations, writeConfirmations } from "@/lib/confirmation-store";
 import type { Confirmation, StoreTask } from "@/types/inventory";
 import type { CurrentUser } from "@/types/dashboard";
 
 const UNDO_SECONDS = 8;
-const STORAGE_KEY = "inventory-optimizer:layar-a:reset";
 
 type UndoState = {
   taskId: string;
   seconds: number;
 };
-
-const listeners = new Set<() => void>();
-let memory: Confirmation[] | undefined;
-
-function subscribe(listener: () => void) {
-  listeners.add(listener);
-  return () => listeners.delete(listener);
-}
-
-function emit() {
-  for (const listener of listeners) listener();
-}
-
-function clientSnapshot(fallback: Confirmation[]) {
-  if (memory === undefined) {
-    memory = readStored() ?? fallback;
-  }
-  return memory;
-}
-
-function persist(next: Confirmation[]) {
-  memory = next;
-  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-  emit();
-}
 
 export function useTaskBoard(
   tasks: StoreTask[],
@@ -43,8 +18,8 @@ export function useTaskBoard(
   user: CurrentUser,
 ) {
   const confirmations = useSyncExternalStore(
-    subscribe,
-    () => clientSnapshot(seeded),
+    subscribeConfirmations,
+    () => readConfirmations(seeded),
     () => seeded,
   );
   const [undo, setUndo] = useState<UndoState | null>(null);
@@ -79,7 +54,7 @@ export function useTaskBoard(
     );
 
   function record(confirmation: Confirmation) {
-    persist([
+    writeConfirmations([
       ...confirmations.filter((item) => item.taskId !== confirmation.taskId),
       confirmation,
     ]);
@@ -115,13 +90,13 @@ export function useTaskBoard(
 
   function undoLast() {
     if (!undo) return;
-    persist(confirmations.filter((item) => item.taskId !== undo.taskId));
+    writeConfirmations(confirmations.filter((item) => item.taskId !== undo.taskId));
     setUndo(null);
   }
 
-  // restore all tasks
+  // restore all tasks — also clears whatever Layar B has derived from them
   function restoreAllTasks() {
-    persist([]);
+    writeConfirmations([]);
     setUndo(null);
   }
 
@@ -136,22 +111,4 @@ export function useTaskBoard(
     undoLast,
     restoreAllTasks,
   };
-}
-
-function readStored() {
-  if (typeof sessionStorage === "undefined") return null;
-
-  try {
-    const parsed: unknown = JSON.parse(sessionStorage.getItem(STORAGE_KEY) ?? "");
-    if (!Array.isArray(parsed)) return null;
-    return parsed.filter(isConfirmation);
-  } catch {
-    return null;
-  }
-}
-
-function isConfirmation(value: unknown): value is Confirmation {
-  if (!value || typeof value !== "object") return false;
-  const record = value as Partial<Confirmation>;
-  return typeof record.taskId === "string" && typeof record.done === "boolean";
 }

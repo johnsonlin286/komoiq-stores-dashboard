@@ -1,0 +1,1509 @@
+{
+  "stores": [
+    {
+      "id": "grand-indonesia",
+      "name": "Ranch Market Grand Indonesia",
+      "wastePercent": 3.9,
+      "shelfAvailability": 97,
+      "slowStockValueLabel": "Rp 45,9 jt"
+    },
+    {
+      "id": "pik",
+      "name": "Ranch Market PIK",
+      "wastePercent": 4.8,
+      "shelfAvailability": 96,
+      "slowStockValueLabel": "Rp 46,7 jt"
+    },
+    {
+      "id": "menteng",
+      "name": "Ranch Market Menteng",
+      "wastePercent": 5.5,
+      "shelfAvailability": 95,
+      "slowStockValueLabel": "Rp 38,2 jt"
+    },
+    {
+      "id": "pondok-indah",
+      "name": "Ranch Market Pondok Indah",
+      "wastePercent": 6.1,
+      "shelfAvailability": 94,
+      "slowStockValueLabel": "Rp 40,5 jt"
+    },
+    {
+      "id": "fatmawati",
+      "name": "Ranch Market Fatmawati",
+      "wastePercent": 6.4,
+      "shelfAvailability": 93,
+      "slowStockValueLabel": "Rp 48,0 jt"
+    }
+  ],
+  "levelTiles": [
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "productCount": 9,
+      "valueLabel": "Rp 11,9 jt"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-3",
+      "productCount": 3,
+      "valueLabel": "Rp 2,4 jt"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-2w",
+      "productCount": 6,
+      "valueLabel": "Rp 18,7 jt"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-3m",
+      "productCount": 5,
+      "valueLabel": "Rp 8,8 jt"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-6m",
+      "productCount": 2,
+      "valueLabel": "Rp 3,1 jt"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-1m",
+      "productCount": 1,
+      "valueLabel": "Rp 1,0 jt"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-3",
+      "productCount": 1,
+      "valueLabel": "Rp 250.000"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-1",
+      "productCount": 6,
+      "valueLabel": "Rp 9,1 jt"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-2",
+      "productCount": 5,
+      "valueLabel": "Rp 9,1 jt"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-3m",
+      "productCount": 2,
+      "valueLabel": "Rp 6,5 jt"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-2w",
+      "productCount": 5,
+      "valueLabel": "Rp 13,5 jt"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-1m",
+      "productCount": 2,
+      "valueLabel": "Rp 7,6 jt"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-6m",
+      "productCount": 1,
+      "valueLabel": "Rp 697.000"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "productCount": 11,
+      "valueLabel": "Rp 9,9 jt"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-2",
+      "productCount": 3,
+      "valueLabel": "Rp 2,9 jt"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-3",
+      "productCount": 1,
+      "valueLabel": "Rp 359.000"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-3m",
+      "productCount": 4,
+      "valueLabel": "Rp 9,0 jt"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-2w",
+      "productCount": 5,
+      "valueLabel": "Rp 11,6 jt"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-1m",
+      "productCount": 3,
+      "valueLabel": "Rp 4,4 jt"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "productCount": 8,
+      "valueLabel": "Rp 5,2 jt"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-2",
+      "productCount": 4,
+      "valueLabel": "Rp 3,7 jt"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "productCount": 7,
+      "valueLabel": "Rp 17,2 jt"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-6m",
+      "productCount": 2,
+      "valueLabel": "Rp 3,9 jt"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-1m",
+      "productCount": 4,
+      "valueLabel": "Rp 9,9 jt"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-3m",
+      "productCount": 1,
+      "valueLabel": "Rp 571.000"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-2",
+      "productCount": 5,
+      "valueLabel": "Rp 15,2 jt"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-3",
+      "productCount": 5,
+      "valueLabel": "Rp 3,3 jt"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-1",
+      "productCount": 2,
+      "valueLabel": "Rp 1,1 jt"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-1m",
+      "productCount": 5,
+      "valueLabel": "Rp 9,0 jt"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-3m",
+      "productCount": 5,
+      "valueLabel": "Rp 8,3 jt"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-2w",
+      "productCount": 5,
+      "valueLabel": "Rp 11,1 jt"
+    }
+  ],
+  "products": [
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-002",
+      "productName": "Bayam organik",
+      "stock": 29,
+      "valueLabel": "Rp 439.000",
+      "replacement": "Brokoli",
+      "nextAction": "Diskon 30% mulai Senin"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-3",
+      "sku": "SG-SAY-003",
+      "productName": "Tomat ceri",
+      "stock": 27,
+      "valueLabel": "Rp 256.000",
+      "replacement": "Jeruk sunkist",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-007",
+      "productName": "Jeruk sunkist",
+      "stock": 25,
+      "valueLabel": "Rp 586.000",
+      "replacement": "Tomat ceri",
+      "nextAction": "Diskon 40% mulai Jumat"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-008",
+      "productName": "Apel fuji",
+      "stock": 36,
+      "valueLabel": "Rp 1,1 jt",
+      "replacement": "Brokoli",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-DAI-002",
+      "productName": "Susu oat 1 L",
+      "stock": 11,
+      "valueLabel": "Rp 480.000",
+      "replacement": "Greek yogurt 500g",
+      "nextAction": "Diskon 40% mulai Senin"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-DAI-005",
+      "productName": "Susu UHT full cream 1 L",
+      "stock": 21,
+      "valueLabel": "Rp 609.000",
+      "replacement": "Greek yogurt 500g",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-001",
+      "productName": "Roti sourdough",
+      "stock": 33,
+      "valueLabel": "Rp 905.000",
+      "replacement": "Croissant almond",
+      "nextAction": "Diskon 40% mulai Rabu"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-002",
+      "productName": "Croissant almond",
+      "stock": 31,
+      "valueLabel": "Rp 1,1 jt",
+      "replacement": "Muffin blueberry",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-3",
+      "sku": "SG-RTI-003",
+      "productName": "Bagel gandum",
+      "stock": 31,
+      "valueLabel": "Rp 644.000",
+      "replacement": "Muffin blueberry",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-3",
+      "sku": "SG-RTI-004",
+      "productName": "Muffin blueberry",
+      "stock": 35,
+      "valueLabel": "Rp 1,5 jt",
+      "replacement": "Roti sourdough",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-DAG-001",
+      "productName": "Salmon fillet",
+      "stock": 28,
+      "valueLabel": "Rp 3,8 jt",
+      "replacement": "Daging sapi has dalam",
+      "nextAction": "Diskon 30% mulai Selasa"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "fresh-1",
+      "sku": "SG-DAG-003",
+      "productName": "Dada ayam fillet",
+      "stock": 22,
+      "valueLabel": "Rp 2,8 jt",
+      "replacement": "Salmon fillet",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-2w",
+      "sku": "NF-GRO-003",
+      "productName": "Beras basmati 5kg",
+      "stock": 37,
+      "valueLabel": "Rp 5,7 jt",
+      "replacement": "Minyak zaitun 1 L",
+      "nextAction": "Diskon 20% mulai Jumat"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-3m",
+      "sku": "NF-GRO-004",
+      "productName": "Tepung terigu 1kg",
+      "stock": 31,
+      "valueLabel": "Rp 4,4 jt",
+      "replacement": "Pasta spaghetti 500g",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-3m",
+      "sku": "NF-GRO-006",
+      "productName": "Kopi arabika 250g",
+      "stock": 19,
+      "valueLabel": "Rp 849.000",
+      "replacement": "Madu murni 350ml",
+      "nextAction": "Diskon 40% mulai Kamis"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-2w",
+      "sku": "NF-MIN-002",
+      "productName": "Kombucha 6-pack",
+      "stock": 56,
+      "valueLabel": "Rp 1,5 jt",
+      "replacement": "Soda water 6-pack",
+      "nextAction": "Diskon 40% mulai Selasa"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-2w",
+      "sku": "NF-MIN-003",
+      "productName": "Teh hijau impor 50s",
+      "stock": 48,
+      "valueLabel": "Rp 2,9 jt",
+      "replacement": "Kombucha 6-pack",
+      "nextAction": "Diskon 30% mulai Senin"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-6m",
+      "sku": "NF-BUM-001",
+      "productName": "Saus truffle 200ml",
+      "stock": 37,
+      "valueLabel": "Rp 2,8 jt",
+      "replacement": "Saus sambal 340ml",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-1m",
+      "sku": "NF-BUM-002",
+      "productName": "Saus tomat 340g",
+      "stock": 14,
+      "valueLabel": "Rp 1,0 jt",
+      "replacement": "Saus sambal 340ml",
+      "nextAction": "Diskon 40% mulai Selasa"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-3m",
+      "sku": "NF-BUM-003",
+      "productName": "Kecap manis 600ml",
+      "stock": 17,
+      "valueLabel": "Rp 568.000",
+      "replacement": "Saus tomat 340g",
+      "nextAction": "Diskon 40% mulai Senin"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-3m",
+      "sku": "NF-BUM-004",
+      "productName": "Saus sambal 340ml",
+      "stock": 42,
+      "valueLabel": "Rp 1,6 jt",
+      "replacement": "Kecap manis 600ml",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-6m",
+      "sku": "NF-BUM-005",
+      "productName": "Bumbu rendang instan",
+      "stock": 6,
+      "valueLabel": "Rp 314.000",
+      "replacement": "Saus truffle 200ml",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-2w",
+      "sku": "NF-PRC-003",
+      "productName": "Pasta gigi whitening",
+      "stock": 15,
+      "valueLabel": "Rp 890.000",
+      "replacement": "Shampo keratin 350ml",
+      "nextAction": "Diskon 40% mulai Rabu"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-3m",
+      "sku": "NF-PRC-004",
+      "productName": "Hand sanitizer 100ml",
+      "stock": 27,
+      "valueLabel": "Rp 1,4 jt",
+      "replacement": "Pasta gigi whitening",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-2w",
+      "sku": "NF-RTG-003",
+      "productName": "Pembersih lantai 800ml",
+      "stock": 12,
+      "valueLabel": "Rp 496.000",
+      "replacement": "Deterjen cair 1 L",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "grand-indonesia",
+      "levelId": "other-2w",
+      "sku": "NF-PET-002",
+      "productName": "Pet food 1kg",
+      "stock": 53,
+      "valueLabel": "Rp 7,2 jt",
+      "replacement": "Pet food 2kg",
+      "nextAction": "Pindah ke PIK"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-3",
+      "sku": "SG-SAY-001",
+      "productName": "Selada romaine",
+      "stock": 17,
+      "valueLabel": "Rp 250.000",
+      "replacement": "Paprika merah",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-004",
+      "productName": "Wortel baby",
+      "stock": 27,
+      "valueLabel": "Rp 730.000",
+      "replacement": "Bayam organik",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-005",
+      "productName": "Brokoli",
+      "stock": 10,
+      "valueLabel": "Rp 168.000",
+      "replacement": "Selada romaine",
+      "nextAction": "Diskon 40% mulai Selasa"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-2",
+      "sku": "SG-SAY-007",
+      "productName": "Jeruk sunkist",
+      "stock": 33,
+      "valueLabel": "Rp 1,1 jt",
+      "replacement": "Paprika merah",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-1",
+      "sku": "SG-DAI-001",
+      "productName": "Greek yogurt 500g",
+      "stock": 8,
+      "valueLabel": "Rp 506.000",
+      "replacement": "Susu oat 1 L",
+      "nextAction": "Diskon 30% mulai Rabu"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-2",
+      "sku": "SG-DAI-003",
+      "productName": "Keju manchego 150g",
+      "stock": 11,
+      "valueLabel": "Rp 552.000",
+      "replacement": "Susu UHT full cream 1 L",
+      "nextAction": "Diskon 20% mulai Kamis"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-2",
+      "sku": "SG-DAI-004",
+      "productName": "Mentega Eropa 200g",
+      "stock": 31,
+      "valueLabel": "Rp 2,1 jt",
+      "replacement": "Susu UHT full cream 1 L",
+      "nextAction": "Diskon 30% mulai Rabu"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-001",
+      "productName": "Roti sourdough",
+      "stock": 35,
+      "valueLabel": "Rp 1,4 jt",
+      "replacement": "Croissant almond",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-2",
+      "sku": "SG-RTI-002",
+      "productName": "Croissant almond",
+      "stock": 18,
+      "valueLabel": "Rp 434.000",
+      "replacement": "Muffin blueberry",
+      "nextAction": "Diskon 20% mulai Rabu"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-003",
+      "productName": "Bagel gandum",
+      "stock": 9,
+      "valueLabel": "Rp 269.000",
+      "replacement": "Muffin blueberry",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-1",
+      "sku": "SG-DAG-002",
+      "productName": "Udang vaname",
+      "stock": 38,
+      "valueLabel": "Rp 6,0 jt",
+      "replacement": "Dada ayam fillet",
+      "nextAction": "Diskon 30% mulai Selasa"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "fresh-2",
+      "sku": "SG-DAG-004",
+      "productName": "Daging sapi has dalam",
+      "stock": 30,
+      "valueLabel": "Rp 5,0 jt",
+      "replacement": "Salmon fillet",
+      "nextAction": "Diskon 30% mulai Jumat"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-3m",
+      "sku": "NF-GRO-001",
+      "productName": "Minyak zaitun 1 L",
+      "stock": 30,
+      "valueLabel": "Rp 2,0 jt",
+      "replacement": "Gula pasir 1kg",
+      "nextAction": "Diskon 40% mulai Kamis"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-2w",
+      "sku": "NF-GRO-003",
+      "productName": "Beras basmati 5kg",
+      "stock": 30,
+      "valueLabel": "Rp 3,6 jt",
+      "replacement": "Tepung terigu 1kg",
+      "nextAction": "Diskon 20% mulai Selasa"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-3m",
+      "sku": "NF-GRO-004",
+      "productName": "Tepung terigu 1kg",
+      "stock": 36,
+      "valueLabel": "Rp 4,5 jt",
+      "replacement": "Madu murni 350ml",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-2w",
+      "sku": "NF-GRO-005",
+      "productName": "Gula pasir 1kg",
+      "stock": 11,
+      "valueLabel": "Rp 1,3 jt",
+      "replacement": "Beras basmati 5kg",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-1m",
+      "sku": "NF-GRO-007",
+      "productName": "Sereal granola 400g",
+      "stock": 48,
+      "valueLabel": "Rp 7,3 jt",
+      "replacement": "Tepung terigu 1kg",
+      "nextAction": "Diskon 50% mulai Selasa"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-2w",
+      "sku": "NF-GRO-008",
+      "productName": "Madu murni 350ml",
+      "stock": 56,
+      "valueLabel": "Rp 6,8 jt",
+      "replacement": "Pasta spaghetti 500g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-2w",
+      "sku": "NF-MIN-001",
+      "productName": "Jus jeruk 1 L",
+      "stock": 28,
+      "valueLabel": "Rp 766.000",
+      "replacement": "Air mineral 1,5L (24-pack)",
+      "nextAction": "Diskon 40% mulai Senin"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-6m",
+      "sku": "NF-MIN-004",
+      "productName": "Air mineral 1,5L (24-pack)",
+      "stock": 14,
+      "valueLabel": "Rp 697.000",
+      "replacement": "Teh hijau impor 50s",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-1m",
+      "sku": "NF-PRC-004",
+      "productName": "Hand sanitizer 100ml",
+      "stock": 9,
+      "valueLabel": "Rp 227.000",
+      "replacement": "Pasta gigi whitening",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pik",
+      "levelId": "other-2w",
+      "sku": "NF-PET-003",
+      "productName": "Pasir kucing 5L",
+      "stock": 21,
+      "valueLabel": "Rp 960.000",
+      "replacement": "Pet food 2kg",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-001",
+      "productName": "Selada romaine",
+      "stock": 13,
+      "valueLabel": "Rp 170.000",
+      "replacement": "Apel fuji",
+      "nextAction": "Diskon 30% mulai Selasa"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-002",
+      "productName": "Bayam organik",
+      "stock": 37,
+      "valueLabel": "Rp 349.000",
+      "replacement": "Brokoli",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-003",
+      "productName": "Tomat ceri",
+      "stock": 6,
+      "valueLabel": "Rp 68.000",
+      "replacement": "Apel fuji",
+      "nextAction": "Diskon 50% mulai Senin"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-005",
+      "productName": "Brokoli",
+      "stock": 26,
+      "valueLabel": "Rp 626.000",
+      "replacement": "Bayam organik",
+      "nextAction": "Diskon 30% mulai Rabu"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-006",
+      "productName": "Paprika merah",
+      "stock": 9,
+      "valueLabel": "Rp 76.000",
+      "replacement": "Wortel baby",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-007",
+      "productName": "Jeruk sunkist",
+      "stock": 26,
+      "valueLabel": "Rp 622.000",
+      "replacement": "Selada romaine",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-DAI-001",
+      "productName": "Greek yogurt 500g",
+      "stock": 20,
+      "valueLabel": "Rp 509.000",
+      "replacement": "Mentega Eropa 200g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-DAI-002",
+      "productName": "Susu oat 1 L",
+      "stock": 24,
+      "valueLabel": "Rp 860.000",
+      "replacement": "Mentega Eropa 200g",
+      "nextAction": "Diskon 50% mulai Jumat"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-2",
+      "sku": "SG-DAI-004",
+      "productName": "Mentega Eropa 200g",
+      "stock": 16,
+      "valueLabel": "Rp 457.000",
+      "replacement": "Keju manchego 150g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-3",
+      "sku": "SG-RTI-002",
+      "productName": "Croissant almond",
+      "stock": 9,
+      "valueLabel": "Rp 359.000",
+      "replacement": "Roti sourdough",
+      "nextAction": "Diskon 40% mulai Kamis"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-004",
+      "productName": "Muffin blueberry",
+      "stock": 29,
+      "valueLabel": "Rp 1,1 jt",
+      "replacement": "Bagel gandum",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-2",
+      "sku": "SG-DAG-001",
+      "productName": "Salmon fillet",
+      "stock": 9,
+      "valueLabel": "Rp 1,6 jt",
+      "replacement": "Udang vaname",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-DAG-002",
+      "productName": "Udang vaname",
+      "stock": 18,
+      "valueLabel": "Rp 2,0 jt",
+      "replacement": "Salmon fillet",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-1",
+      "sku": "SG-DAG-003",
+      "productName": "Dada ayam fillet",
+      "stock": 19,
+      "valueLabel": "Rp 3,6 jt",
+      "replacement": "Udang vaname",
+      "nextAction": "Diskon 30% mulai Senin"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "fresh-2",
+      "sku": "SG-DAG-004",
+      "productName": "Daging sapi has dalam",
+      "stock": 10,
+      "valueLabel": "Rp 844.000",
+      "replacement": "Dada ayam fillet",
+      "nextAction": "Diskon 30% mulai Selasa"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-3m",
+      "sku": "NF-GRO-003",
+      "productName": "Beras basmati 5kg",
+      "stock": 51,
+      "valueLabel": "Rp 6,5 jt",
+      "replacement": "Minyak zaitun 1 L",
+      "nextAction": "Diskon 50% mulai Rabu"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-2w",
+      "sku": "NF-GRO-008",
+      "productName": "Madu murni 350ml",
+      "stock": 12,
+      "valueLabel": "Rp 1,9 jt",
+      "replacement": "Sereal granola 400g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-3m",
+      "sku": "NF-MIN-001",
+      "productName": "Jus jeruk 1 L",
+      "stock": 16,
+      "valueLabel": "Rp 347.000",
+      "replacement": "Kombucha 6-pack",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-1m",
+      "sku": "NF-MIN-003",
+      "productName": "Teh hijau impor 50s",
+      "stock": 33,
+      "valueLabel": "Rp 782.000",
+      "replacement": "Soda water 6-pack",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-2w",
+      "sku": "NF-BUM-001",
+      "productName": "Saus truffle 200ml",
+      "stock": 47,
+      "valueLabel": "Rp 2,4 jt",
+      "replacement": "Saus tomat 340g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-2w",
+      "sku": "NF-BUM-002",
+      "productName": "Saus tomat 340g",
+      "stock": 60,
+      "valueLabel": "Rp 5,1 jt",
+      "replacement": "Saus sambal 340ml",
+      "nextAction": "Diskon 40% mulai Senin"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-1m",
+      "sku": "NF-BUM-003",
+      "productName": "Kecap manis 600ml",
+      "stock": 33,
+      "valueLabel": "Rp 2,4 jt",
+      "replacement": "Bumbu rendang instan",
+      "nextAction": "Diskon 40% mulai Jumat"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-2w",
+      "sku": "NF-BUM-005",
+      "productName": "Bumbu rendang instan",
+      "stock": 15,
+      "valueLabel": "Rp 419.000",
+      "replacement": "Saus sambal 340ml",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-3m",
+      "sku": "NF-PRC-004",
+      "productName": "Hand sanitizer 100ml",
+      "stock": 24,
+      "valueLabel": "Rp 1,4 jt",
+      "replacement": "Pasta gigi whitening",
+      "nextAction": "Diskon 40% mulai Senin"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-3m",
+      "sku": "NF-RTG-002",
+      "productName": "Deterjen cair 1 L",
+      "stock": 37,
+      "valueLabel": "Rp 712.000",
+      "replacement": "Tisu dapur 6-roll",
+      "nextAction": "Diskon 30% mulai Selasa"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-2w",
+      "sku": "NF-PET-002",
+      "productName": "Pet food 1kg",
+      "stock": 12,
+      "valueLabel": "Rp 1,7 jt",
+      "replacement": "Pet food 2kg",
+      "nextAction": "Diskon 20% mulai Rabu"
+    },
+    {
+      "storeId": "menteng",
+      "levelId": "other-1m",
+      "sku": "NF-PET-003",
+      "productName": "Pasir kucing 5L",
+      "stock": 20,
+      "valueLabel": "Rp 1,2 jt",
+      "replacement": "Pet food 1kg",
+      "nextAction": "Diskon 40% mulai Selasa"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-003",
+      "productName": "Tomat ceri",
+      "stock": 17,
+      "valueLabel": "Rp 382.000",
+      "replacement": "Bayam organik",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-004",
+      "productName": "Wortel baby",
+      "stock": 30,
+      "valueLabel": "Rp 1,0 jt",
+      "replacement": "Selada romaine",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-006",
+      "productName": "Paprika merah",
+      "stock": 3,
+      "valueLabel": "Rp 31.000",
+      "replacement": "Apel fuji",
+      "nextAction": "Diskon 30% mulai Kamis"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-2",
+      "sku": "SG-SAY-007",
+      "productName": "Jeruk sunkist",
+      "stock": 36,
+      "valueLabel": "Rp 667.000",
+      "replacement": "Apel fuji",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-DAI-001",
+      "productName": "Greek yogurt 500g",
+      "stock": 4,
+      "valueLabel": "Rp 247.000",
+      "replacement": "Mentega Eropa 200g",
+      "nextAction": "Diskon 20% mulai Selasa"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-2",
+      "sku": "SG-DAI-002",
+      "productName": "Susu oat 1 L",
+      "stock": 32,
+      "valueLabel": "Rp 1,6 jt",
+      "replacement": "Susu UHT full cream 1 L",
+      "nextAction": "Diskon 50% mulai Jumat"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-2",
+      "sku": "SG-DAI-003",
+      "productName": "Keju manchego 150g",
+      "stock": 12,
+      "valueLabel": "Rp 769.000",
+      "replacement": "Greek yogurt 500g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-2",
+      "sku": "SG-DAI-004",
+      "productName": "Mentega Eropa 200g",
+      "stock": 14,
+      "valueLabel": "Rp 713.000",
+      "replacement": "Susu UHT full cream 1 L",
+      "nextAction": "Diskon 20% mulai Jumat"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-002",
+      "productName": "Croissant almond",
+      "stock": 14,
+      "valueLabel": "Rp 588.000",
+      "replacement": "Roti sourdough",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-003",
+      "productName": "Bagel gandum",
+      "stock": 35,
+      "valueLabel": "Rp 1,2 jt",
+      "replacement": "Croissant almond",
+      "nextAction": "Diskon 50% mulai Rabu"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-DAG-001",
+      "productName": "Salmon fillet",
+      "stock": 18,
+      "valueLabel": "Rp 1,4 jt",
+      "replacement": "Daging sapi has dalam",
+      "nextAction": "Diskon 30% mulai Jumat"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "fresh-1",
+      "sku": "SG-DAG-002",
+      "productName": "Udang vaname",
+      "stock": 5,
+      "valueLabel": "Rp 370.000",
+      "replacement": "Salmon fillet",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "sku": "NF-GRO-004",
+      "productName": "Tepung terigu 1kg",
+      "stock": 33,
+      "valueLabel": "Rp 4,0 jt",
+      "replacement": "Beras basmati 5kg",
+      "nextAction": "Diskon 50% mulai Kamis"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-6m",
+      "sku": "NF-GRO-005",
+      "productName": "Gula pasir 1kg",
+      "stock": 19,
+      "valueLabel": "Rp 2,6 jt",
+      "replacement": "Beras basmati 5kg",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-1m",
+      "sku": "NF-GRO-006",
+      "productName": "Kopi arabika 250g",
+      "stock": 26,
+      "valueLabel": "Rp 2,6 jt",
+      "replacement": "Gula pasir 1kg",
+      "nextAction": "Diskon 30% mulai Jumat"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "sku": "NF-GRO-007",
+      "productName": "Sereal granola 400g",
+      "stock": 51,
+      "valueLabel": "Rp 6,8 jt",
+      "replacement": "Madu murni 350ml",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "sku": "NF-MIN-001",
+      "productName": "Jus jeruk 1 L",
+      "stock": 9,
+      "valueLabel": "Rp 297.000",
+      "replacement": "Kombucha 6-pack",
+      "nextAction": "Diskon 30% mulai Senin"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "sku": "NF-MIN-005",
+      "productName": "Soda water 6-pack",
+      "stock": 30,
+      "valueLabel": "Rp 1,3 jt",
+      "replacement": "Kombucha 6-pack",
+      "nextAction": "Diskon 20% mulai Jumat"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "sku": "NF-BUM-004",
+      "productName": "Saus sambal 340ml",
+      "stock": 38,
+      "valueLabel": "Rp 2,1 jt",
+      "replacement": "Saus tomat 340g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "sku": "NF-BUM-005",
+      "productName": "Bumbu rendang instan",
+      "stock": 49,
+      "valueLabel": "Rp 1,5 jt",
+      "replacement": "Saus sambal 340ml",
+      "nextAction": "Diskon 50% mulai Rabu"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-6m",
+      "sku": "NF-PRC-001",
+      "productName": "Sabun mandi cair 500ml",
+      "stock": 57,
+      "valueLabel": "Rp 1,4 jt",
+      "replacement": "Hand sanitizer 100ml",
+      "nextAction": "Diskon 20% mulai Rabu"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-1m",
+      "sku": "NF-PRC-002",
+      "productName": "Shampo keratin 350ml",
+      "stock": 33,
+      "valueLabel": "Rp 2,3 jt",
+      "replacement": "Hand sanitizer 100ml",
+      "nextAction": "Diskon 20% mulai Kamis"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-3m",
+      "sku": "NF-PRC-004",
+      "productName": "Hand sanitizer 100ml",
+      "stock": 17,
+      "valueLabel": "Rp 571.000",
+      "replacement": "Sabun mandi cair 500ml",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-2w",
+      "sku": "NF-RTG-003",
+      "productName": "Pembersih lantai 800ml",
+      "stock": 30,
+      "valueLabel": "Rp 1,3 jt",
+      "replacement": "Deterjen cair 1 L",
+      "nextAction": "Diskon 20% mulai Jumat"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-1m",
+      "sku": "NF-PET-001",
+      "productName": "Pet food 2kg",
+      "stock": 40,
+      "valueLabel": "Rp 3,5 jt",
+      "replacement": "Snack anjing 200g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "pondok-indah",
+      "levelId": "other-1m",
+      "sku": "NF-PET-002",
+      "productName": "Pet food 1kg",
+      "stock": 22,
+      "valueLabel": "Rp 1,4 jt",
+      "replacement": "Pet food 2kg",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-2",
+      "sku": "SG-SAY-001",
+      "productName": "Selada romaine",
+      "stock": 11,
+      "valueLabel": "Rp 178.000",
+      "replacement": "Apel fuji",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-3",
+      "sku": "SG-SAY-002",
+      "productName": "Bayam organik",
+      "stock": 35,
+      "valueLabel": "Rp 710.000",
+      "replacement": "Jeruk sunkist",
+      "nextAction": "Diskon 50% mulai Rabu"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-3",
+      "sku": "SG-SAY-004",
+      "productName": "Wortel baby",
+      "stock": 13,
+      "valueLabel": "Rp 405.000",
+      "replacement": "Paprika merah",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-2",
+      "sku": "SG-SAY-006",
+      "productName": "Paprika merah",
+      "stock": 16,
+      "valueLabel": "Rp 317.000",
+      "replacement": "Apel fuji",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-1",
+      "sku": "SG-SAY-008",
+      "productName": "Apel fuji",
+      "stock": 11,
+      "valueLabel": "Rp 382.000",
+      "replacement": "Selada romaine",
+      "nextAction": "Diskon 40% mulai Senin"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-3",
+      "sku": "SG-DAI-005",
+      "productName": "Susu UHT full cream 1 L",
+      "stock": 23,
+      "valueLabel": "Rp 626.000",
+      "replacement": "Greek yogurt 500g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-1",
+      "sku": "SG-RTI-001",
+      "productName": "Roti sourdough",
+      "stock": 25,
+      "valueLabel": "Rp 677.000",
+      "replacement": "Muffin blueberry",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-3",
+      "sku": "SG-RTI-003",
+      "productName": "Bagel gandum",
+      "stock": 23,
+      "valueLabel": "Rp 1,0 jt",
+      "replacement": "Muffin blueberry",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-2",
+      "sku": "SG-RTI-004",
+      "productName": "Muffin blueberry",
+      "stock": 37,
+      "valueLabel": "Rp 1,3 jt",
+      "replacement": "Roti sourdough",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-2",
+      "sku": "SG-DAG-001",
+      "productName": "Salmon fillet",
+      "stock": 36,
+      "valueLabel": "Rp 7,8 jt",
+      "replacement": "Udang vaname",
+      "nextAction": "Diskon 30% mulai Senin"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-3",
+      "sku": "SG-DAG-002",
+      "productName": "Udang vaname",
+      "stock": 7,
+      "valueLabel": "Rp 481.000",
+      "replacement": "Dada ayam fillet",
+      "nextAction": "Diskon 20% mulai Senin"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "fresh-2",
+      "sku": "SG-DAG-003",
+      "productName": "Dada ayam fillet",
+      "stock": 38,
+      "valueLabel": "Rp 5,6 jt",
+      "replacement": "Udang vaname",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-1m",
+      "sku": "NF-GRO-004",
+      "productName": "Tepung terigu 1kg",
+      "stock": 38,
+      "valueLabel": "Rp 1,6 jt",
+      "replacement": "Gula pasir 1kg",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-3m",
+      "sku": "NF-GRO-006",
+      "productName": "Kopi arabika 250g",
+      "stock": 6,
+      "valueLabel": "Rp 637.000",
+      "replacement": "Minyak zaitun 1 L",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-2w",
+      "sku": "NF-MIN-001",
+      "productName": "Jus jeruk 1 L",
+      "stock": 12,
+      "valueLabel": "Rp 585.000",
+      "replacement": "Kombucha 6-pack",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-3m",
+      "sku": "NF-MIN-003",
+      "productName": "Teh hijau impor 50s",
+      "stock": 40,
+      "valueLabel": "Rp 1,8 jt",
+      "replacement": "Jus jeruk 1 L",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-1m",
+      "sku": "NF-MIN-004",
+      "productName": "Air mineral 1,5L (24-pack)",
+      "stock": 8,
+      "valueLabel": "Rp 314.000",
+      "replacement": "Teh hijau impor 50s",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-2w",
+      "sku": "NF-MIN-005",
+      "productName": "Soda water 6-pack",
+      "stock": 23,
+      "valueLabel": "Rp 708.000",
+      "replacement": "Kombucha 6-pack",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-3m",
+      "sku": "NF-BUM-001",
+      "productName": "Saus truffle 200ml",
+      "stock": 23,
+      "valueLabel": "Rp 1,6 jt",
+      "replacement": "Saus tomat 340g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-1m",
+      "sku": "NF-BUM-002",
+      "productName": "Saus tomat 340g",
+      "stock": 47,
+      "valueLabel": "Rp 4,0 jt",
+      "replacement": "Saus truffle 200ml",
+      "nextAction": "Diskon 40% mulai Selasa"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-3m",
+      "sku": "NF-BUM-003",
+      "productName": "Kecap manis 600ml",
+      "stock": 37,
+      "valueLabel": "Rp 3,3 jt",
+      "replacement": "Saus tomat 340g",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-3m",
+      "sku": "NF-PRC-001",
+      "productName": "Sabun mandi cair 500ml",
+      "stock": 34,
+      "valueLabel": "Rp 1,0 jt",
+      "replacement": "Hand sanitizer 100ml",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-1m",
+      "sku": "NF-PRC-003",
+      "productName": "Pasta gigi whitening",
+      "stock": 21,
+      "valueLabel": "Rp 452.000",
+      "replacement": "Hand sanitizer 100ml",
+      "nextAction": "Diskon 30% mulai Rabu"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-2w",
+      "sku": "NF-PRC-004",
+      "productName": "Hand sanitizer 100ml",
+      "stock": 59,
+      "valueLabel": "Rp 1,7 jt",
+      "replacement": "Pasta gigi whitening",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-2w",
+      "sku": "NF-RTG-003",
+      "productName": "Pembersih lantai 800ml",
+      "stock": 46,
+      "valueLabel": "Rp 2,6 jt",
+      "replacement": "Deterjen cair 1 L",
+      "nextAction": "Pindah ke Grand Indonesia"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-2w",
+      "sku": "NF-PET-001",
+      "productName": "Pet food 2kg",
+      "stock": 48,
+      "valueLabel": "Rp 5,5 jt",
+      "replacement": "Snack anjing 200g",
+      "nextAction": "Diskon 40% mulai Kamis"
+    },
+    {
+      "storeId": "fatmawati",
+      "levelId": "other-1m",
+      "sku": "NF-PET-002",
+      "productName": "Pet food 1kg",
+      "stock": 59,
+      "valueLabel": "Rp 2,6 jt",
+      "replacement": "Pet food 2kg",
+      "nextAction": "Pindah ke Grand Indonesia"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import { decrypt } from "@/server/session";
 import {
   homeForRole,
   storeAdminRole,
+  superAdminRole,
   type AppRole,
   type CurrentUser,
 } from "@/types/dashboard";
@@ -19,7 +20,7 @@ export const getSessionUser = cache(async (): Promise<CurrentUser | null> => {
 export async function requireRole(role: AppRole) {
   const user = await getSessionUser();
   if (!user) redirect("/");
-  if (user.role !== role) redirect(homeForRole(user.role));
+  if (user.role !== role && user.role !== superAdminRole) redirect(homeForRole(user.role));
   return user;
 }
 
