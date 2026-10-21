@@ -1,0 +1,28 @@
+node_modules
+npm-debug.log*
+
+.next
+out
+
+.git
+.gitignore
+
+.vscode
+.DS_Store
+
+# env files — .env.dev / .env.prod ARE needed in the build context (the
+# Dockerfile COPYs the one selected by APP_ENV); only keep real secrets
+# (.env.local and friends) and the example files out.
+.env
+.env.local
+.env.production
+!.env.dev
+!.env.prod
+!.env.example
+!.env.dev.example
+!.env.prod.example
+
+*.md
+.claude
+scripts
+coverage

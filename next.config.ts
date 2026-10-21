@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   poweredByHeader: false,
   cacheComponents: true,
   partialPrefetching: true,
@@ -14,8 +15,21 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     const isDev = process.env.NODE_ENV === "development";
-    // Nonce CSP needs a dynamic render on every request, which fights Cache
-    // Components. This is the header policy Next.js documents for that case.
+    // `upgrade-insecure-requests` and HSTS both assume every request already
+    // arrives over TLS — they tell the browser to rewrite every same-origin
+    // http:// asset request to https:// (HSTS also caches that instruction
+    // for 2 years). That's correct once this sits behind a real domain +
+    // reverse proxy/ELB terminating TLS, but it breaks a plain-HTTP
+    // deployment (e.g. hitting an ECS box directly by IP:port) completely:
+    // the browser tries to fetch CSS/JS over https on a port that only
+    // speaks HTTP and every asset fails with ERR_SSL_PROTOCOL_ERROR.
+    // Only turn this on once TLS is actually terminated in front of the app.
+    // Note: this is read while `next build` prerenders static pages, so it's
+    // effectively a build-time flag — see the ENABLE_SECURE_HEADERS build
+    // arg in the Dockerfile. Setting it as a `docker run` env var instead
+    // would silently have no effect on statically prerendered routes.
+    const httpsTerminated = process.env.ENABLE_SECURE_HEADERS === "true";
+
     const contentSecurityPolicy = [
       "default-src 'self'",
       `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
@@ -28,7 +42,7 @@ const nextConfig: NextConfig = {
       "form-action 'self'",
       "frame-ancestors 'none'",
       "frame-src 'none'",
-      ...(isDev ? [] : ["upgrade-insecure-requests"]),
+      ...(httpsTerminated ? ["upgrade-insecure-requests"] : []),
     ].join("; ");
 
     const securityHeaders = [
@@ -41,14 +55,14 @@ const nextConfig: NextConfig = {
         value: "camera=(), microphone=(), geolocation=(), payment=()",
       },
       { key: "X-DNS-Prefetch-Control", value: "off" },
-      ...(isDev
-        ? []
-        : [
+      ...(httpsTerminated
+        ? [
             {
               key: "Strict-Transport-Security",
               value: "max-age=63072000; includeSubDomains; preload",
             },
-          ]),
+          ]
+        : []),
     ];
 
     return [{ source: "/(.*)", headers: securityHeaders }];

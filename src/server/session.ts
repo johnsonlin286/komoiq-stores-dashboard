@@ -62,9 +62,17 @@ export async function createSession(user: CurrentUser) {
   const token = await encrypt(user);
   const cookieStore = await cookies();
 
+  // `Secure` cookies are silently dropped by the browser over plain HTTP —
+  // no error anywhere, the Set-Cookie header is just ignored, which looks
+  // exactly like "login succeeds then immediately bounces back with no
+  // error" (the middleware sees no session cookie on the next request).
+  // NODE_ENV is always "production" in the Docker image regardless of
+  // whether TLS is actually in front of it, so it can't be used to decide
+  // this — use the same ENABLE_SECURE_HEADERS flag as next.config.ts's HSTS
+  // header instead (set it once a reverse proxy/ELB actually terminates TLS).
   cookieStore.set(COOKIE_NAME, token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    secure: process.env.ENABLE_SECURE_HEADERS === "true",
     sameSite: "lax",
     path: "/",
     maxAge: MAX_AGE_SECONDS,
