@@ -1,3 +1,5 @@
+import type { Locale } from "@/i18n/locale";
+
 export const storeAdminRole = "store-admin" as const;
 export const storeManagementRole = "store-management" as const;
 // Demo-only role (see establishDemoSession in app/actions/auth.ts): logs in
@@ -18,6 +20,10 @@ export type CurrentUser = {
   name: string;
   email: string;
   role: SessionRole;
+  // Persisted on the session (see setLocale in app/actions/locale.ts) —
+  // "per akun" in the sense of "for the rest of this login", not across
+  // logins; there's no user-profile store yet to remember it longer term.
+  locale: Locale;
 };
 
 export function isAppRole(value: unknown): value is AppRole {

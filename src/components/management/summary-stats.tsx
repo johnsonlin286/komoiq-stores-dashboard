@@ -1,7 +1,11 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { formatPercent, sumRupiahLabels } from "@/lib/management";
 import type { ManagementData } from "@/types/management";
 
 export function SummaryStats({ data }: { data: ManagementData }) {
+  const t = useTranslations("Management");
   const averageWaste =
     data.stores.reduce((sum, store) => sum + store.wastePercent, 0) / data.stores.length;
   const bestStore = [...data.stores].sort((a, b) => a.wastePercent - b.wastePercent)[0];
@@ -9,30 +13,32 @@ export function SummaryStats({ data }: { data: ManagementData }) {
   const cards = [
     {
       key: "stores",
-      label: "Semua toko",
+      label: t("statStores"),
       value: String(data.stores.length),
-      detail: "toko dipantau",
+      detail: t("statStoresDetail"),
       accent: "bg-management",
     },
     {
       key: "waste",
-      label: "Rata-rata terbuang",
+      label: t("statWaste"),
       value: formatPercent(averageWaste),
-      detail: "dari semua toko",
+      detail: t("statWasteDetail"),
       accent: "bg-warning",
     },
     {
       key: "flagged",
-      label: "Produk bermasalah",
+      label: t("statFlagged"),
       value: String(data.products.length),
-      detail: "stok tidak bergerak",
+      detail: t("statFlaggedDetail"),
       accent: "bg-danger",
     },
     {
       key: "value",
-      label: "Nilai stok tidak bergerak",
+      label: t("statValue"),
       value: sumRupiahLabels(data.levelTiles.map((tile) => tile.valueLabel)),
-      detail: bestStore ? `terbaik: ${bestStore.name.replace("Ranch Market ", "")}` : "",
+      detail: bestStore
+        ? t("statValueBest", { store: bestStore.name.replace("Ranch Market ", "") })
+        : "",
       accent: "bg-accent",
     },
   ] as const;

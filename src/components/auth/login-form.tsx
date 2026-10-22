@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { BrandMark } from "@/components/brand-mark";
 import { Button } from "@/components/ui/button";
 import { TextField } from "@/components/ui/text-field";
 import { useLoginForm } from "@/hooks/use-login-form";
 
 export function LoginForm() {
+  const t = useTranslations("Auth");
   const { state, pending, submit } = useLoginForm();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -22,10 +24,8 @@ export function LoginForm() {
       <div className="grid gap-3">
         <BrandMark />
         <div className="grid gap-1">
-          <h1 className="text-2xl font-semibold tracking-tight">Masuk</h1>
-          <p className="text-sm leading-6 text-muted">
-            Gunakan email dan kata sandi untuk membuka tugas toko hari ini.
-          </p>
+          <h1 className="text-2xl font-semibold tracking-tight">{t("title")}</h1>
+          <p className="text-sm leading-6 text-muted">{t("subtitle")}</p>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ export function LoginForm() {
       ) : null}
 
       <TextField
-        label="Email"
+        label={t("emailLabel")}
         name="email"
         type="email"
         autoComplete="email"
@@ -52,7 +52,7 @@ export function LoginForm() {
 
       <div className="grid gap-2">
         <TextField
-          label="Kata sandi"
+          label={t("passwordLabel")}
           name="password"
           type={showPassword ? "text" : "password"}
           autoComplete="current-password"
@@ -66,12 +66,12 @@ export function LoginForm() {
           onClick={() => setShowPassword((current) => !current)}
           aria-pressed={showPassword}
         >
-          {showPassword ? "Sembunyikan kata sandi" : "Tampilkan kata sandi"}
+          {showPassword ? t("hidePassword") : t("showPassword")}
         </button>
       </div>
 
       <Button type="submit" className="w-full" disabled={pending}>
-        {pending ? "Memeriksa…" : "Masuk"}
+        {pending ? t("submitPending") : t("submit")}
       </Button>
     </form>
   );

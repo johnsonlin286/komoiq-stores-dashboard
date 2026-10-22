@@ -2,9 +2,11 @@
 
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { clearLoginAttempts, consumeLoginAttempt } from "@/server/rate-limit";
 import { verifyFirebaseIdToken } from "@/server/firebase-token";
 import { createSession, deleteSession } from "@/server/session";
+import { defaultLocale } from "@/i18n/locale";
 import { homeForRole, isAppRole, superAdminRole, type CurrentUser } from "@/types/dashboard";
 import type { LoginState } from "@/server/validation";
 
@@ -28,17 +30,18 @@ export async function establishDemoSession(
     return { matched: false };
   }
 
+  const t = await getTranslations("Auth.errors");
   const headerList = await headers();
   const forwarded = headerList.get("x-forwarded-for")?.split(",")[0]?.trim();
   const client = forwarded || headerList.get("x-real-ip") || "local";
   const attempt = consumeLoginAttempt(client);
 
   if (!attempt.allowed) {
-    return { matched: true, message: "Terlalu banyak percobaan. Coba lagi dalam 15 menit." };
+    return { matched: true, message: t("tooManyAttempts") };
   }
 
   if (password !== demoPassword) {
-    return { matched: true, message: "Email atau kata sandi tidak sesuai." };
+    return { matched: true, message: t("wrongCredentials") };
   }
 
   clearLoginAttempts(client);
@@ -47,31 +50,31 @@ export async function establishDemoSession(
     email: demoEmail,
     name: process.env.AUTH_NAME?.trim() || demoEmail,
     role: superAdminRole,
+    locale: defaultLocale,
   });
   redirect(homeForRole(superAdminRole));
 }
 
 export async function establishSession(idToken: string): Promise<LoginState> {
+  const t = await getTranslations("Auth.errors");
   const headerList = await headers();
   const forwarded = headerList.get("x-forwarded-for")?.split(",")[0]?.trim();
   const client = forwarded || headerList.get("x-real-ip") || "local";
   const attempt = consumeLoginAttempt(client);
 
   if (!attempt.allowed) {
-    return { message: "Terlalu banyak percobaan. Coba lagi dalam 15 menit." };
+    return { message: t("tooManyAttempts") };
   }
 
   let verified;
   try {
     verified = await verifyFirebaseIdToken(idToken);
   } catch {
-    return { message: "Tidak dapat memverifikasi sesi Firebase." };
+    return { message: t("unverifiedFirebaseSession") };
   }
 
   if (!isAppRole(verified.role)) {
-    return {
-      message: "Akun ini belum memiliki peran yang dikenali.",
-    };
+    return { message: t("unknownRole") };
   }
 
   const user: CurrentUser = {
@@ -79,6 +82,7 @@ export async function establishSession(idToken: string): Promise<LoginState> {
     email: verified.email,
     name: verified.name,
     role: verified.role,
+    locale: defaultLocale,
   };
 
   clearLoginAttempts(client);

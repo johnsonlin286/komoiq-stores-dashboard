@@ -2,6 +2,7 @@ import "server-only";
 
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
+import { defaultLocale, isLocale } from "@/i18n/locale";
 import { isSessionRole, type CurrentUser } from "@/types/dashboard";
 
 const COOKIE_NAME = "session";
@@ -22,6 +23,7 @@ export async function encrypt(user: CurrentUser) {
     email: user.email,
     name: user.name,
     role: user.role,
+    locale: user.locale,
   })
     .setProtectedHeader({ alg: "HS256" })
     .setSubject(user.id)
@@ -52,6 +54,9 @@ export async function decrypt(token: string | undefined): Promise<CurrentUser | 
       email: payload.email,
       name: payload.name,
       role: payload.role,
+      // Falls back for sessions signed before locale was tracked, rather
+      // than treating them as invalid.
+      locale: isLocale(payload.locale) ? payload.locale : defaultLocale,
     };
   } catch {
     return null;

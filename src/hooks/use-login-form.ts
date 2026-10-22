@@ -3,19 +3,21 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { isRedirectError } from "next/dist/client/components/redirect-error";
+import { useTranslations } from "next-intl";
 import { establishDemoSession, establishSession } from "@/app/actions/auth";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { missingFirebaseEnv } from "@/lib/firebase-config";
-import { loginSchema, type LoginState } from "@/server/validation";
+import { createLoginSchema, type AuthErrorsTranslator, type LoginState } from "@/server/validation";
 import * as z from "zod";
 
 export function useLoginForm() {
+  const t = useTranslations("Auth.errors");
   const [state, setState] = useState<LoginState>({});
   const [pending, setPending] = useState(false);
 
   async function submit(formData: FormData) {
     setState({});
-    const parsed = loginSchema.safeParse({
+    const parsed = createLoginSchema(t).safeParse({
       email: formData.get("email"),
       password: formData.get("password"),
     });
@@ -38,16 +40,14 @@ export function useLoginForm() {
       }
     } catch (error) {
       if (isRedirectError(error)) throw error;
-      setState({ message: "Tidak dapat masuk saat ini." });
+      setState({ message: t("genericSignInError") });
       return;
     } finally {
       setPending(false);
     }
 
     if (missingFirebaseEnv().length > 0) {
-      setState({
-        message: "Konfigurasi Firebase belum lengkap. Salin variabel NEXT_PUBLIC_FIREBASE ke .env.local.",
-      });
+      setState({ message: t("missingFirebaseEnv") });
       return;
     }
 
@@ -69,7 +69,7 @@ export function useLoginForm() {
     } catch (error) {
       if (isRedirectError(error)) throw error;
       await signOut(auth).catch(() => undefined);
-      setState({ message: loginErrorMessage(error) });
+      setState({ message: loginErrorMessage(error, t) });
     } finally {
       setPending(false);
     }
@@ -78,7 +78,7 @@ export function useLoginForm() {
   return { state, pending, submit };
 }
 
-function loginErrorMessage(error: unknown) {
+function loginErrorMessage(error: unknown, t: AuthErrorsTranslator) {
   const code =
     typeof error === "object" && error && "code" in error ? String(error.code) : "";
 
@@ -88,24 +88,24 @@ function loginErrorMessage(error: unknown) {
     code === "auth/user-not-found" ||
     code === "auth/invalid-email"
   ) {
-    return "Email atau kata sandi tidak sesuai.";
+    return t("wrongCredentials");
   }
 
   if (code === "auth/too-many-requests") {
-    return "Terlalu banyak percobaan. Coba lagi dalam 15 menit.";
+    return t("tooManyAttempts");
   }
 
   if (code === "auth/operation-not-allowed") {
-    return "Masuk dengan email belum diaktifkan di Firebase.";
+    return t("firebaseSignInNotEnabled");
   }
 
   if (code === "auth/unauthorized-domain") {
-    return "Domain ini belum diizinkan di Firebase Authentication.";
+    return t("unauthorizedDomain");
   }
 
   if (code === "auth/network-request-failed") {
-    return "Tidak dapat terhubung ke Firebase.";
+    return t("networkError");
   }
 
-  return "Tidak dapat masuk saat ini.";
+  return t("genericSignInError");
 }

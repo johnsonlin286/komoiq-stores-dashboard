@@ -1,4 +1,28 @@
 {
-  "freshDays": [1, 2, 3],
-  "otherDays": [14, 30, 90, 180]
+  "warnings": {
+    "freshDays": [1, 2, 3],
+    "otherDays": [14, 30, 90, 180],
+    "slowMovingDays": 21
+  },
+  "shelfLifeDays": {
+    "sayur": 4,
+    "buah": 5,
+    "daging": 3,
+    "keju": 14,
+    "roti": 2
+  },
+  "bestToday": [
+    { "code": "BT30", "percent": 30 },
+    { "code": "BT50", "percent": 50 }
+  ],
+  "tasks": {
+    "maxPerDay": 15,
+    "checklistItemCount": 12
+  },
+  "transfer": {
+    "quickHopKm": 3,
+    "vanRunKm": 10,
+    "minValueMultiplier": 3,
+    "maintainMinDisplayAtSender": true
+  }
 }

@@ -13,7 +13,14 @@
   --color-panel: #fffcf8;
   --color-danger: #8e2a24;
   --color-warning: #b4501e;
-  --color-slow: #0e7c73;
+  /* Task status (Langkah 3 brief): kuning = lambat (slow), merah = tidak
+     laku/mendesak (dead, uses --color-danger above). Kept distinct from
+     --color-warning (orange) so "Slow" reads as yellow, not orange. */
+  --color-slow: #8a6d1a;
+  --color-slow-soft: #faf0c6;
+  /* Decorative leaf/fresh-produce accent (store-level-tiles icon) — not a
+     status color, kept separate so it can't be mistaken for "Slow". */
+  --color-leaf: #0e7c73;
   --color-urgent-soft: #f8d4d0;
   --color-attention-soft: #f8e7c4;
   --color-done: #1f7a4d;

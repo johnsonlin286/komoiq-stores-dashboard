@@ -1,18 +1,28 @@
+"use client";
+
 import type { ReactNode } from "react";
+import { useTranslations } from "next-intl";
 import { Breadcrumb } from "@/components/management/breadcrumb";
 import { BoxIcon, ChevronRightIcon, LeafIcon } from "@/components/management/icons";
 import { LevelLegend } from "@/components/management/level-legend";
+import { useLevelText } from "@/hooks/use-level-text";
 import { useResolvedProducts } from "@/hooks/use-resolved-products";
+import { useSettings } from "@/hooks/use-settings";
 import { getLevels } from "@/lib/levels";
 import { HOME_STORE_ID } from "@/lib/linked-tasks";
 import { formatPercent, sumRupiahLabels } from "@/lib/management";
 import type { LevelId, LevelTone } from "@/types/inventory";
 import type { ManagementData } from "@/types/management";
 
-const toneStyle: Record<LevelTone, { border: string; chip: string; chipLabel: string }> = {
-  neutral: { border: "border-line", chip: "bg-background text-muted", chipLabel: "Pantau" },
-  attention: { border: "border-warning", chip: "bg-warning/10 text-warning", chipLabel: "Perhatian" },
-  urgent: { border: "border-danger", chip: "bg-danger/10 text-danger", chipLabel: "Mendesak" },
+const toneBorder: Record<LevelTone, string> = {
+  neutral: "border-line",
+  attention: "border-warning",
+  urgent: "border-danger",
+};
+const toneChip: Record<LevelTone, string> = {
+  neutral: "bg-background text-muted",
+  attention: "bg-warning/10 text-warning",
+  urgent: "bg-danger/10 text-danger",
 };
 
 export function StoreLevelTiles({
@@ -26,13 +36,16 @@ export function StoreLevelTiles({
   onBack: () => void;
   onSelectLevel: (levelId: LevelId) => void;
 }) {
+  const t = useTranslations("StoreLevelTiles");
+  const tManagement = useTranslations("Management");
   const resolved = useResolvedProducts();
+  const settings = useSettings();
   const store = data.stores.find((item) => item.id === storeId);
   if (!store) return null;
 
   const tiles = data.levelTiles.filter((tile) => tile.storeId === storeId);
-  const freshLevels = getLevels().filter((level) => level.kind === "fresh");
-  const otherLevels = getLevels().filter((level) => level.kind === "other");
+  const freshLevels = getLevels(settings.warnings).filter((level) => level.kind === "fresh");
+  const otherLevels = getLevels(settings.warnings).filter((level) => level.kind === "other");
   const totalFlagged = tiles.reduce((sum, tile) => sum + tile.productCount, 0);
   const totalValue = sumRupiahLabels(tiles.map((tile) => tile.valueLabel));
   const resolvedHere = storeId === HOME_STORE_ID ? resolved.length : 0;
@@ -42,7 +55,7 @@ export function StoreLevelTiles({
       <div className="border-b border-line px-4 py-4 md:px-5">
         <Breadcrumb
           items={[
-            { label: "Semua toko", onSelect: onBack },
+            { label: tManagement("allStores"), onSelect: onBack },
             { label: store.name.replace("Ranch Market ", "") },
           ]}
         />
@@ -50,27 +63,29 @@ export function StoreLevelTiles({
           <div>
             <h2 className="text-lg font-semibold">{store.name}</h2>
             <p className="mt-0.5 text-sm text-muted">
-              Terbuang {formatPercent(store.wastePercent)} · rak tersedia {store.shelfAvailability}%
+              {t("wasteAndShelf", {
+                waste: formatPercent(store.wastePercent),
+                shelf: store.shelfAvailability,
+              })}
             </p>
           </div>
           <p className="rounded-full bg-background px-3 py-1.5 text-xs font-semibold text-muted">
-            {totalFlagged} produk bermasalah · {totalValue}
+            {t("flaggedSummary", { count: totalFlagged, value: totalValue })}
           </p>
         </div>
       </div>
 
       {resolvedHere > 0 ? (
         <p className="border-b border-line bg-done-soft px-4 py-2.5 text-xs font-medium text-done md:px-5">
-          {resolvedHere} tugas sudah dikonfirmasi &ldquo;selesai&rdquo; di Layar A hari ini — sudah
-          dikurangi dari daftar di bawah.
+          {t("resolvedBanner", { count: resolvedHere })}
         </p>
       ) : null}
 
       <div className="grid gap-5 px-4 py-5 md:px-5">
         <LevelLegend />
         <TileGroup
-          title="Barang segar"
-          icon={<LeafIcon className="size-4 text-slow" />}
+          title={t("freshGroup")}
+          icon={<LeafIcon className="size-4 text-leaf" />}
           levels={freshLevels.map((level) => ({
             level,
             tile: tiles.find((tile) => tile.levelId === level.id),
@@ -78,7 +93,7 @@ export function StoreLevelTiles({
           onSelectLevel={onSelectLevel}
         />
         <TileGroup
-          title="Barang lain"
+          title={t("otherGroup")}
           icon={<BoxIcon className="size-4 text-muted" />}
           levels={otherLevels.map((level) => ({
             level,
@@ -102,6 +117,14 @@ function TileGroup({
   levels: { level: ReturnType<typeof getLevels>[number]; tile: ManagementData["levelTiles"][number] | undefined }[];
   onSelectLevel: (levelId: LevelId) => void;
 }) {
+  const t = useTranslations("StoreLevelTiles");
+  const { shortLabel } = useLevelText();
+  const toneLabel: Record<LevelTone, string> = {
+    neutral: t("watch"),
+    attention: t("attention"),
+    urgent: t("urgent"),
+  };
+
   return (
     <div>
       <p className="mb-2 flex items-center gap-1.5 text-sm font-semibold">
@@ -109,32 +132,29 @@ function TileGroup({
         {title}
       </p>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {levels.map(({ level, tile }) => {
-          const style = toneStyle[level.tone];
-          return (
-            <button
-              key={level.id}
-              type="button"
-              onClick={() => onSelectLevel(level.id)}
-              className={`group flex flex-col rounded-xl border-2 bg-panel px-4 py-3 text-left transition hover:-translate-y-0.5 hover:shadow-md ${style.border}`}
-            >
-              <span className="flex items-center justify-between gap-2">
-                <span className="text-xs font-semibold text-muted">{level.shortLabel}</span>
-                <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-semibold ${style.chip}`}>
-                  {style.chipLabel}
-                </span>
+        {levels.map(({ level, tile }) => (
+          <button
+            key={level.id}
+            type="button"
+            onClick={() => onSelectLevel(level.id)}
+            className={`group flex flex-col rounded-xl border-2 bg-panel px-4 py-3 text-left transition hover:-translate-y-0.5 hover:shadow-md ${toneBorder[level.tone]}`}
+          >
+            <span className="flex items-center justify-between gap-2">
+              <span className="text-xs font-semibold text-muted">{shortLabel(level)}</span>
+              <span className={`rounded-full px-1.5 py-0.5 text-[10px] font-semibold ${toneChip[level.tone]}`}>
+                {toneLabel[level.tone]}
               </span>
-              <span className="mt-1.5 text-2xl font-semibold tabular-nums">{tile?.productCount ?? 0}</span>
-              <span className="flex items-center justify-between text-xs text-muted">
-                <span>produk</span>
-                {tile ? <span>{tile.valueLabel}</span> : null}
-              </span>
-              <span className="mt-2 flex items-center gap-1 text-xs font-medium text-management opacity-0 transition group-hover:opacity-100">
-                Lihat daftar <ChevronRightIcon className="size-3.5" />
-              </span>
-            </button>
-          );
-        })}
+            </span>
+            <span className="mt-1.5 text-2xl font-semibold tabular-nums">{tile?.productCount ?? 0}</span>
+            <span className="flex items-center justify-between text-xs text-muted">
+              <span>{t("items")}</span>
+              {tile ? <span>{tile.valueLabel}</span> : null}
+            </span>
+            <span className="mt-2 flex items-center gap-1 text-xs font-medium text-management opacity-0 transition group-hover:opacity-100">
+              {t("viewList")} <ChevronRightIcon className="size-3.5" />
+            </span>
+          </button>
+        ))}
       </div>
     </div>
   );

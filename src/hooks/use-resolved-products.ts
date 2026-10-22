@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { useTranslations } from "next-intl";
 import { readConfirmations, subscribeConfirmations } from "@/lib/confirmation-store";
 import { getTaskRef, HOME_STORE_ID } from "@/lib/linked-tasks";
 import { reasonLabel, type Confirmation } from "@/types/inventory";
@@ -37,6 +38,7 @@ export function useResolvedProducts(): ResolvedProductKey[] {
 // why a flagged item is still sitting there unresolved.
 export function useSkippedProducts(): SkippedProductKey[] {
   const confirmations = useLinkedConfirmations();
+  const tReasons = useTranslations("Reasons");
 
   return confirmations
     .filter((confirmation) => !confirmation.done)
@@ -48,7 +50,7 @@ export function useSkippedProducts(): SkippedProductKey[] {
           storeId: HOME_STORE_ID,
           sku: ref.sku,
           levelId: ref.levelId,
-          reasonLabel: reasonLabel(confirmation.reason ?? "lainnya", confirmation.note),
+          reasonLabel: reasonLabel(tReasons, confirmation.reason ?? "lainnya", confirmation.note),
         },
       ];
     });

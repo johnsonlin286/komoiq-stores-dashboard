@@ -1,10 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Breadcrumb } from "@/components/management/breadcrumb";
 import { ArrowRightIcon, SearchIcon, TagIcon } from "@/components/management/icons";
 import { LevelBadge } from "@/components/inventory/level-badge";
+import { useLevelText } from "@/hooks/use-level-text";
 import { useSkippedProducts } from "@/hooks/use-resolved-products";
+import { useSettings } from "@/hooks/use-settings";
 import { getLevel } from "@/lib/levels";
 import { parseRupiah } from "@/lib/management";
 import type { LevelId } from "@/types/inventory";
@@ -23,9 +26,13 @@ export function ProductList({
   onBack: () => void;
   onBackToStores: () => void;
 }) {
+  const t = useTranslations("ProductList");
+  const tManagement = useTranslations("Management");
+  const { shortLabel } = useLevelText();
+  const settings = useSettings();
   const [query, setQuery] = useState("");
   const store = data.stores.find((item) => item.id === storeId);
-  const level = getLevel(levelId);
+  const level = getLevel(levelId, settings.warnings);
 
   const skipReasonBySku = new Map(
     useSkippedProducts()
@@ -54,9 +61,9 @@ export function ProductList({
       <div className="border-b border-line px-4 py-4 md:px-5">
         <Breadcrumb
           items={[
-            { label: "Semua toko", onSelect: onBackToStores },
+            { label: tManagement("allStores"), onSelect: onBackToStores },
             { label: store.name.replace("Ranch Market ", ""), onSelect: onBack },
-            { label: `${level.shortLabel} · ${products.length} produk` },
+            { label: t("itemsCount", { level: shortLabel(level), count: products.length }) },
           ]}
         />
         <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
@@ -72,7 +79,7 @@ export function ProductList({
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Cari produk atau SKU…"
+                placeholder={t("searchPlaceholder")}
                 className="w-56 rounded-full border border-line bg-background py-2 pr-3 pl-9 text-sm outline-none focus:border-management focus:ring-4 focus:ring-management/15"
               />
             </label>
@@ -81,24 +88,22 @@ export function ProductList({
       </div>
 
       {products.length === 0 ? (
-        <p className="px-4 py-10 text-center text-sm text-muted md:px-5">
-          Belum ada produk contoh untuk level ini.
-        </p>
+        <p className="px-4 py-10 text-center text-sm text-muted md:px-5">{t("emptyLevel")}</p>
       ) : filtered.length === 0 ? (
         <p className="px-4 py-10 text-center text-sm text-muted md:px-5">
-          Tidak ada produk yang cocok dengan &ldquo;{query}&rdquo;.
+          {t("emptyQuery", { query })}
         </p>
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full min-w-[62rem] text-sm">
             <thead>
               <tr className="border-b border-line text-left text-xs font-semibold tracking-wide text-muted uppercase">
-                <th className="px-4 py-2.5 md:px-5">Produk / SKU</th>
-                <th className="px-4 py-2.5 text-right md:px-5">Stok</th>
-                <th className="px-4 py-2.5 text-right md:px-5">Nilai</th>
-                <th className="px-4 py-2.5 md:px-5">Ganti dengan apa</th>
-                <th className="px-4 py-2.5 md:px-5">Pindah ke mana / diskon</th>
-                <th className="px-4 py-2.5 md:px-5">Catatan manajer toko</th>
+                <th className="px-4 py-2.5 md:px-5">{t("colProduct")}</th>
+                <th className="px-4 py-2.5 text-right md:px-5">{t("colStock")}</th>
+                <th className="px-4 py-2.5 text-right md:px-5">{t("colValue")}</th>
+                <th className="px-4 py-2.5 md:px-5">{t("colReplace")}</th>
+                <th className="px-4 py-2.5 md:px-5">{t("colMoveTo")}</th>
+                <th className="px-4 py-2.5 md:px-5">{t("colNote")}</th>
               </tr>
             </thead>
             <tbody>
@@ -133,7 +138,7 @@ export function ProductList({
                     <td className="px-4 py-3 md:px-5">
                       {skipReason ? (
                         <span className="inline-flex items-center rounded-full bg-skipped-soft px-2.5 py-1 text-xs font-medium text-skipped">
-                          Tidak dikerjakan — {skipReason}
+                          {t("notDoneReason", { reason: skipReason })}
                         </span>
                       ) : (
                         <span className="text-xs text-muted">—</span>
@@ -146,10 +151,7 @@ export function ProductList({
           </table>
         </div>
       )}
-      <p className="px-4 py-3 text-xs text-muted md:px-5">
-        Saran &ldquo;ganti dengan apa&rdquo; dan &ldquo;pindah ke mana / diskon&rdquo; belum otomatis —
-        logikanya dibuat tim backend setelah data Ranch tersambung.
-      </p>
+      <p className="px-4 py-3 text-xs text-muted md:px-5">{t("footerNote")}</p>
     </section>
   );
 }
